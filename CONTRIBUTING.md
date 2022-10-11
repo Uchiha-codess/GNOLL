@@ -1,24 +1,122 @@
-# How to Contribute
-We're so happy you're considering contributing! Thank you! We hope this document will make it easier to do that.
+# Contributing Guidelines 👨‍💻
+## 👨‍💻 Prerequisite Skills to Contribute
 
-# Process
-Please assign yourself to a ticket, or request this, so anyone looking doesn't work on the same thing! Clone the code, make your changes, add a test & create a PR! We'll try to review it as soon as we can
+### Contribute in public/Profile
 
-# Scope
-GNOLL is specifically designed to be a library for Dice Notation. What that means is, that we are looking for contributions that expand, improve or simplify parsing that notation. TTRPG character creation/storage, Encounter tracking or any other game mechanics are **out of scope** and are best handled as a wrapper around GNOLL in a seperate repository.
+- [Git](https://git-scm.com/) 
+- [Basic JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Similarly, GNOLL is not overly concerned about the graphical display of the results, but the actual results themselves. We may only consider these contributions on a per-case basis.
+### Contribute in Documents
 
-# New Language Support
-We would love it if you added a language not yet on our list. We have two things for you to observe first though.
-1. Please add a test so we will know if it breaks!
-2. Try to use the existing C code, if you think there is no way to do this, please mention it in our issues/discussion tab so we can discuss alternatives. We'd really like to avoid duplicating files!
-3. Provide both a passing case AND a failing case to show our exit codes being used.
+- [Markdown](https://www.markdownguide.org/basic-syntax/)
 
-# C Guidelines
-As much as possible, try to keep logic *out* of the .lex and .yacc files and in functions imported from other files.
+---
+## 💥 How to Contribute
 
-GNOLL should ideally never crash and we control this by:
-- Writing errors to the global `gnoll_errno`
-- Checking this value is == 0 before doing any work in your function.
-- All functions that can cause memory/io issues should use safe equivilents in safe_functions.h . Where a function can produce an error code, they should immediately return.
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/akshitagupta15june/PetMe/pulls)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/akshitagupta15june)
+
+- Take a look at the existing [Issues](https://github.com/akshitagupta15june/PetMe/issues) or [create a new issue](https://github.com/akshitagupta15june/PetMe/issues/new/choose)!
+- [Fork the Repo](https://github.com/Susmita-Dey/all-round-calculator/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
+- Create a **[Pull Request](https://github.com/akshitagupta15june/PetMe/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
+- Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes proposed in your PR.
+
+
+---
+## ⭐ HOW TO MAKE A PULL REQUEST:
+
+**1.** Start by making a Fork of the [**PetMe**](https://github.com/akshitagupta15june/PetMe/) repository. Click on the <a href="https://github.com/akshitagupta15june/PetMe/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a>Fork symbol at the top right corner.
+
+**2.** Clone your new fork of the repository in the terminal/CLI on your computer with the following command:
+
+```bash
+git clone https://github.com/<your-github-username>/PetMe
+```
+
+**3.** Navigate to the newly created LinkFree project directory:
+
+```bash
+cd PetMe
+```
+
+**4.** Set upstream command:
+
+```bash
+git remote add upstream https://github.com/Susmita-Dey/PetMe.git
+```
+
+**5.** Create a new branch:
+
+```bash
+git checkout -b YourBranchName
+```
+
+**6.** Sync your fork or your local repository with the origin repository:
+
+- In your forked repository, click on "Fetch upstream"
+- Click "Fetch and merge"
+
+### Alternatively, Git CLI way to Sync forked repository with origin repository:
+
+```bash
+git fetch upstream
+```
+
+```bash
+git merge upstream/main
+```
+
+### [Github Docs](https://docs.github.com/en/github/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github) for Syncing
+
+**7.** Make your changes to the source code.
+
+**8.** Stage your changes and commit:
+
+⚠️ **Make sure** not to commit `package.json` or `package-lock.json` file
+
+⚠️ **Make sure** not to run the commands `git add .` or `git add *`. Instead, stage your changes for each file/folder
+
+```bash
+git add public
+```
+
+```bash
+git commit -m "<your_commit_message>"
+```
+
+**9.** Push your local commits to the remote repository:
+
+```bash
+git push origin YourBranchName
+```
+
+**10.** Create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
+
+**11.** **Congratulations!** You've made your first contribution to [**PetMe**](https://github.com/akshitagupta15june/PetMe/graphs/contributors)! 🙌🏼
+
+**_:trophy: After this, the maintainers will review the PR and will merge it if it helps move the all-round-calculator project forward. Otherwise, it will be given constructive feedback and suggestions for the changes needed to add the PR to the codebase._**
+
+---
+
+## Style Guide for Git Commit Messages :memo:
+
+**How you can add more value to your contribution logs:**
+
+- Use the present tense. (Example: "Add feature" instead of "Added feature")
+- Use the imperative mood. (Example: "Move item to...", instead of "Moves item to...")
+- Limit the first line (also called the Subject Line) to _50 characters or less_.
+- Capitalize the Subject Line.
+- Separate subject from body with a blank line.
+- Do not end the subject line with a period.
+- Wrap the body at _72 characters_.
+- Use the body to explain the _what_, _why_, _vs_, and _how_.
+- Reference [Issues](https://github.com/akshitagupta15june/PetMe/issues) and [Pull Requests](https://github.com/akshitagupta15june/PetMe/pulls) liberally after the first line.
+
+---
+## 💥 Issues
+
+In order to discuss changes, you are welcome to [open an issue](https://github.com/akshitagupta15june/PetMe/issues/new/choose) about what you would like to contribute. Enhancements are always encouraged and appreciated.
+
+## All the best! 🥇
+
+[![built with love](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/akshitagupta15june)
